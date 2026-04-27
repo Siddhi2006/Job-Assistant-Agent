@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Job Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>🤖 AI Agent</h2>
+
+  <button onclick="show('resume')">Resume</button>
+  <button onclick="show('skills')">Skill Extractor</button>
+  <button onclick="show('jobs')">Job Fetcher</button>
+  <button onclick="show('match')">Job Matcher</button>
+  <button onclick="show('recommend')">Recommendation</button>
+  <button onclick="show('gap')">Skill Gap</button>
+  <button onclick="show('roadmap')">Roadmap</button>
+  <button onclick="show('chat')">Chatbot</button>
+</div>
+
+<div class="main">
+
+  <!-- RESUME -->
+  <div id="resume" class="section active">
+    <h2>Upload Resume (PDF)</h2>
+
+    <input type="file" id="resumeFile" accept=".pdf">
+
+    <button onclick="runModule('resume')">Analyze Resume</button>
+
+    <div id="resumeResult"></div>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="section hidden">
+    <h2>Skill Extractor</h2>
+
+    <button onclick="runModule('skills')">Extract Skills</button>
+
+    <div id="skillsResult"></div>
+  </div>
+
+  <!-- JOBS -->
+  <div id="jobs" class="section hidden">
+    <h2>Job Fetcher</h2>
+
+    <input id="role" placeholder="Enter role">
+    <button onclick="runModule('jobs')">Search Jobs</button>
+
+    <div id="jobsResult"></div>
+  </div>
+
+  <!-- MATCH -->
+  <div id="match" class="section hidden">
+    <h2>Job Matcher</h2>
+
+    <button onclick="runModule('match')">Match Jobs</button>
+
+    <div id="matchResult"></div>
+  </div>
+
+  <!-- RECOMMEND -->
+  <div id="recommend" class="section hidden">
+    <h2>Recommendation</h2>
+
+    <button onclick="runModule('recommend')">Get Recommendation</button>
+
+    <div id="recommendResult"></div>
+  </div>
+
+  <!-- GAP -->
+  <div id="gap" class="section hidden">
+    <h2>Skill Gap Analyzer</h2>
+
+    <button onclick="runModule('gap')">Analyze Gap</button>
+
+    <div id="gapResult"></div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div id="roadmap" class="section hidden">
+    <h2>Roadmap Generator</h2>
+
+    <button onclick="runModule('roadmap')">Generate Roadmap</button>
+
+    <div id="roadmapResult"></div>
+  </div>
+
+  <!-- CHAT -->
+  <div id="chat" class="section hidden">
+    <h2>AI Chatbot</h2>
+
+    <div id="chatBox"></div>
+
+    <input id="question" placeholder="Ask anything...">
+    <button onclick="runModule('chat')">Send</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

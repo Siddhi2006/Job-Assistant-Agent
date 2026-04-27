@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+}
+
+/* ---------------- SIDEBAR ---------------- */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid #1f2937;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #60a5fa;
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.sidebar button:hover {
+  background: #2563eb;
+  transform: scale(1.03);
+}
+
+/* ---------------- MAIN AREA ---------------- */
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+/* ---------------- SECTIONS ---------------- */
+.section {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ---------------- INPUTS ---------------- */
+textarea,
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+  font-size: 14px;
+}
+
+textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* ---------------- BUTTONS ---------------- */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+
+/* ---------------- OUTPUT BOX ---------------- */
+#resumeResult,
+#skillsResult,
+#jobsResult,
+#matchResult,
+#recommendResult,
+#gapResult,
+#roadmapResult {
+  background: #1e293b;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  border: 1px solid #334155;
+}
+
+/* ---------------- CHAT BOX ---------------- */
+#chatBox {
+  height: 350px;
+  overflow-y: auto;
+  background: #111827;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid #1f2937;
+}
+
+/* Chat messages */
+#chatBox p {
+  margin: 6px 0;
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- SCROLLBAR ---------------- */
+#chatBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatBox::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
